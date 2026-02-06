@@ -28,6 +28,11 @@ theme = "PaperMod"
   weight = 2
 
 [[menu.main]]
+  name = "Calendar"
+  url = "/calendar/"
+  weight = 3
+
+[[menu.main]]
   name = "Tags"
   url = "/tags/"
-  weight = 3
+  weight = 4
