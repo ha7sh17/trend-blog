@@ -1,0 +1,22 @@
+baseURL = "https://trend-blog.pages.dev/"
+languageCode = "en-us"
+title = "Trend Blog"
+theme = "PaperMod"
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+
+[params.homeInfoParams]
+  Title = "🔥 Daily Trends"
+  Content = "Automatically curated trending topics from around the world"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/ha7sh17/trend-blog"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
