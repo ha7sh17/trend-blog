@@ -27,3 +27,13 @@ theme = "PaperMod"
   name = "Tags"
   url = "/tags/"
   weight = 3
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 4
+
+[[menu.footer]]
+  name = "Privacy Policy"
+  url = "/privacy/"
+  weight = 1
