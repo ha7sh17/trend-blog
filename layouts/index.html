@@ -20,22 +20,18 @@
     {{- $pages = where $pages "Draft" false }}
     {{- range $pages }}
     <article class="post-entry">
-      <header class="entry-header">
-        <h2>
-          <a href="{{ .Permalink }}" class="entry-link">{{ .Title }}</a>
-        </h2>
-      </header>
+      <a href="{{ .Permalink }}" class="entry-link">
+        <h2 class="entry-title">{{ .Title }}</h2>
+      </a>
       <div class="entry-meta">
         <span class="entry-date">{{ .Date.Format "Jan 2, 2006" }}</span>
         {{- if .Params.tags }}
-        <span class="entry-tags">
-          {{- range first 3 .Params.tags }}
-          <a href="{{ "tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
-          {{- end }}
-        </span>
+        {{- range first 3 .Params.tags }}
+        <span class="entry-tag">#{{ . }}</span>
+        {{- end }}
         {{- end }}
       </div>
-      <p class="entry-content">{{ .Summary | plainify | truncate 120 }}</p>
+      <p class="entry-summary">{{ .Summary | plainify | truncate 150 }}</p>
     </article>
     {{- end }}
   </div>
@@ -43,22 +39,23 @@
 
 <style>
 .home-container {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Compact calendar */
 .top-calendar {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .mini-calendar-widget {
   background: var(--code-bg);
   border-radius: 8px;
   padding: 15px;
-  width: 320px;
+  width: 280px;
 }
 
 .mini-cal-nav {
@@ -76,6 +73,7 @@
   cursor: pointer;
   border-radius: 4px;
   font-size: 16px;
+  line-height: 1;
 }
 
 .mini-cal-nav button:hover {
@@ -91,7 +89,6 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 2px;
-  font-size: 12px;
 }
 
 .mini-header {
@@ -131,7 +128,6 @@
 
 #mini-posts {
   margin-top: 10px;
-  font-size: 12px;
 }
 
 #mini-posts .mini-post-date {
@@ -164,65 +160,62 @@
   text-decoration: underline;
 }
 
-/* Posts grid */
+/* Posts list */
 .posts-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .post-entry {
-  padding: 20px;
   background: var(--code-bg);
   border-radius: 8px;
-}
-
-.entry-header {
-  margin-bottom: 8px;
-}
-
-.entry-header h2 {
-  margin: 0;
-  font-size: 1.1em;
-  line-height: 1.4;
-  font-weight: 600;
+  padding: 20px 25px;
 }
 
 .entry-link {
   text-decoration: none;
+  display: block;
+}
+
+.entry-title {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
   color: var(--primary);
 }
 
-.entry-link:hover {
+.entry-link:hover .entry-title {
   text-decoration: underline;
 }
 
 .entry-meta {
   display: flex;
-  gap: 12px;
-  margin-bottom: 10px;
-  font-size: 12px;
-  color: var(--secondary);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
 }
 
 .entry-date {
+  color: var(--secondary);
   font-weight: 500;
 }
 
-.entry-tags a {
-  margin-right: 6px;
-  text-decoration: none;
+.entry-tag {
   color: var(--secondary);
+  background: var(--tertiary);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.75rem;
 }
 
-.entry-tags a:hover {
-  color: var(--primary);
-}
-
-.entry-content {
+.entry-summary {
   margin: 0;
   color: var(--secondary);
-  font-size: 14px;
+  font-size: 0.9rem;
   line-height: 1.6;
 }
 </style>
