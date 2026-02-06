@@ -1,6 +1,6 @@
 ---
 title: "Jackie Robinson at 107: Why America Still Celebrates Baseball's Greatest Pioneer"
-date: 2026-02-07
+date: 2026-02-06
 draft: false
 tags: ["trending", "sports", "history", "MLB", "civil rights"]
 description: "On what would have been Jackie Robinson's 107th birthday, communities across America honor the legacy of the man who broke baseball's color barrier."

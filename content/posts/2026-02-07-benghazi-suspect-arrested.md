@@ -1,6 +1,6 @@
 ---
 title: "Benghazi Attack Suspect Arrested: Zubayar al-Bakoush Faces U.S. Charges After 14 Years"
-date: 2026-02-07
+date: 2026-02-06
 draft: false
 tags: ["trending", "news", "justice", "international"]
 description: "After more than a decade, an alleged key participant in the 2012 Benghazi attack has been brought to the United States to face federal charges."
