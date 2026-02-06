@@ -51,24 +51,36 @@
 7. Git commit & push
 8. Cloudflare 자동 빌드/배포
 
-## 📝 포스트 형식
+## 📝 포스트 형식 (SEO 최적화)
 
 ```markdown
 ---
-title: "제목"
+title: "키워드를 앞에 배치한 제목 (60자 이내)"
 date: YYYY-MM-DD
 draft: false
-tags: ["trending", "category", ...]
-description: "SEO 설명"
+tags: ["keyword1", "keyword2", ...] # 5-7개
+description: "키워드 포함, 150-160자, 핵심 요약"
 ---
 
-본문 (800-1200 단어)
-- Hook: 왜 지금 트렌딩인지
-- Background: 배경/맥락
-- Current situation: 현재 상황
-- Analysis: 분석/인사이트
-- Conclusion: 결론
+본문 (1000-1500 단어)
 ```
+
+### SEO 체크리스트
+- [ ] **제목**: 키워드 앞쪽 배치, 60자 이내
+- [ ] **Description**: 키워드 포함, 150-160자
+- [ ] **첫 문단**: 키워드 자연스럽게 포함
+- [ ] **H2 소제목**: 키워드 변형 포함 (3-5개)
+- [ ] **본문**: 키워드 2-3% 밀도로 분산
+- [ ] **FAQ 섹션**: "People Also Ask" 노출용 Q&A 2-3개
+- [ ] **결론**: 키워드 다시 언급
+
+### 포스트 구조
+1. **Hook** - 왜 지금 트렌딩인지 (키워드 포함)
+2. **Background** - 배경/맥락
+3. **Current Situation** - 현재 상황 상세
+4. **Analysis** - 분석/인사이트
+5. **FAQ** - `## Frequently Asked Questions`
+6. **Conclusion** - 요약 및 전망
 
 ## 🗓 홈페이지 레이아웃
 
