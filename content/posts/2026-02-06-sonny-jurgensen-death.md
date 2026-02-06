@@ -1,7 +1,7 @@
 ---
 title: "Sonny Jurgensen Dies at 91: Remembering the NFL Legend with the 'Golden Arm'"
 date: 2026-02-06
-draft: true
+draft: false
 tags: ["trending", "sports", "NFL", "football", "obituary"]
 description: "Pro Football Hall of Famer Sonny Jurgensen, one of the greatest quarterbacks in NFL history, has passed away at 91. We look back at his remarkable career and lasting legacy."
 ---
