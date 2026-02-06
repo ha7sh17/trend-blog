@@ -10,10 +10,6 @@ theme = "PaperMod"
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
 
-[params.homeInfoParams]
-  Title = "🔥 Daily Trends"
-  Content = "Your source for the latest trending stories, breaking news, and viral topics"
-
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
