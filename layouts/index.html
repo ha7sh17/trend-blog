@@ -20,17 +20,8 @@
     {{- $pages = where $pages "Draft" false }}
     {{- range $pages }}
     <article class="post-entry">
-      <a href="{{ .Permalink }}" class="entry-link">
-        <h2 class="entry-title">{{ .Title }}</h2>
-      </a>
-      <div class="entry-meta">
-        <span class="entry-date">{{ .Date.Format "Jan 2, 2006" }}</span>
-        {{- if .Params.tags }}
-        {{- range first 3 .Params.tags }}
-        <span class="entry-tag">#{{ . }}</span>
-        {{- end }}
-        {{- end }}
-      </div>
+      <h2 class="entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p class="entry-meta">{{ .Date.Format "Jan 2, 2006" }}{{- if .Params.tags }} · {{ range first 3 .Params.tags }}#{{ . }} {{ end }}{{- end }}</p>
       <p class="entry-summary">{{ .Summary | plainify | truncate 150 }}</p>
     </article>
     {{- end }}
@@ -44,7 +35,6 @@
   padding: 0 20px;
 }
 
-/* Compact calendar */
 .top-calendar {
   display: flex;
   justify-content: center;
@@ -107,64 +97,38 @@
   font-size: 11px;
 }
 
-.mini-day.empty {
-  background: transparent;
-}
-
+.mini-day.empty { background: transparent; }
 .mini-day.has-post {
   background: #ff5a36;
   color: white;
   cursor: pointer;
   font-weight: 600;
 }
+.mini-day.has-post:hover { background: #e04a2a; }
+.mini-day.today { border: 2px solid var(--primary); }
 
-.mini-day.has-post:hover {
-  background: #e04a2a;
-}
-
-.mini-day.today {
-  border: 2px solid var(--primary);
-}
-
-#mini-posts {
-  margin-top: 10px;
-}
-
+#mini-posts { margin-top: 10px; }
 #mini-posts .mini-post-date {
   font-weight: 600;
   margin-bottom: 6px;
   font-size: 11px;
   color: var(--secondary);
 }
-
-#mini-posts ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
+#mini-posts ul { list-style: none; padding: 0; margin: 0; }
 #mini-posts li {
   padding: 6px 8px;
   margin-bottom: 4px;
   background: var(--tertiary);
   border-radius: 4px;
 }
+#mini-posts li a { text-decoration: none; font-size: 11px; }
+#mini-posts li a:hover { text-decoration: underline; }
 
-#mini-posts li a {
-  text-decoration: none;
-  font-size: 11px;
-  line-height: 1.3;
-}
-
-#mini-posts li a:hover {
-  text-decoration: underline;
-}
-
-/* Posts list */
+/* Posts */
 .posts-list {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
 .post-entry {
@@ -173,50 +137,36 @@
   padding: 20px 25px;
 }
 
-.entry-link {
-  text-decoration: none;
+.entry-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
   display: block;
 }
 
-.entry-title {
-  margin: 0 0 12px 0;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.4;
+.entry-title a {
+  text-decoration: none;
   color: var(--primary);
 }
 
-.entry-link:hover .entry-title {
+.entry-title a:hover {
   text-decoration: underline;
 }
 
 .entry-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
-  font-size: 0.8rem;
-}
-
-.entry-date {
+  font-size: 0.85rem;
   color: var(--secondary);
-  font-weight: 500;
-}
-
-.entry-tag {
-  color: var(--secondary);
-  background: var(--tertiary);
-  padding: 2px 8px;
-  border-radius: 3px;
-  font-size: 0.75rem;
+  margin: 0 0 10px 0;
+  display: block;
 }
 
 .entry-summary {
-  margin: 0;
-  color: var(--secondary);
   font-size: 0.9rem;
+  color: var(--secondary);
   line-height: 1.6;
+  margin: 0;
+  display: block;
 }
 </style>
 
@@ -224,11 +174,7 @@
 const posts = [
   {{- range $index, $page := where .Site.RegularPages "Type" "posts" }}
   {{- if $index }},{{ end }}
-  {
-    "title": {{ .Title | jsonify }},
-    "url": "{{ .Permalink }}",
-    "date": "{{ .Date.Format "2006-01-02" }}"
-  }
+  { "title": {{ .Title | jsonify }}, "url": "{{ .Permalink }}", "date": "{{ .Date.Format "2006-01-02" }}" }
   {{- end }}
 ];
 
@@ -238,49 +184,37 @@ const today = new Date();
 function renderMiniCalendar() {
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
-  
-  document.getElementById('mini-month').textContent = 
-    currentDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
-  
+  document.getElementById('mini-month').textContent = currentDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
   const firstDay = new Date(year, month, 1);
   const lastDay = new Date(year, month + 1, 0);
   const startDay = firstDay.getDay();
   const totalDays = lastDay.getDate();
-  
   const calendar = document.getElementById('mini-calendar');
   calendar.innerHTML = '';
-  
-  const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-  days.forEach(day => {
+  ['S','M','T','W','T','F','S'].forEach(day => {
     const header = document.createElement('div');
     header.className = 'mini-header';
     header.textContent = day;
     calendar.appendChild(header);
   });
-  
   for (let i = 0; i < startDay; i++) {
     const empty = document.createElement('div');
     empty.className = 'mini-day empty';
     calendar.appendChild(empty);
   }
-  
   for (let day = 1; day <= totalDays; day++) {
     const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
     const dayPosts = posts.filter(p => p.date === dateStr);
-    
     const dayEl = document.createElement('div');
     dayEl.className = 'mini-day';
     dayEl.textContent = day;
-    
     if (dayPosts.length > 0) {
       dayEl.classList.add('has-post');
       dayEl.onclick = () => showMiniPosts(dateStr, dayPosts);
     }
-    
     if (year === today.getFullYear() && month === today.getMonth() && day === today.getDate()) {
       dayEl.classList.add('today');
     }
-    
     calendar.appendChild(dayEl);
   }
 }
@@ -289,22 +223,11 @@ function showMiniPosts(date, dayPosts) {
   const container = document.getElementById('mini-posts');
   const dateObj = new Date(date + 'T00:00:00');
   const formatted = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-  
-  container.innerHTML = `<div class="mini-post-date">📅 ${formatted}</div><ul>` + 
-    dayPosts.map(p => `<li><a href="${p.url}">${p.title}</a></li>`).join('') +
-    '</ul>';
+  container.innerHTML = `<div class="mini-post-date">📅 ${formatted}</div><ul>` + dayPosts.map(p => `<li><a href="${p.url}">${p.title}</a></li>`).join('') + '</ul>';
 }
 
-document.getElementById('mini-prev').onclick = () => {
-  currentDate.setMonth(currentDate.getMonth() - 1);
-  renderMiniCalendar();
-};
-
-document.getElementById('mini-next').onclick = () => {
-  currentDate.setMonth(currentDate.getMonth() + 1);
-  renderMiniCalendar();
-};
-
+document.getElementById('mini-prev').onclick = () => { currentDate.setMonth(currentDate.getMonth() - 1); renderMiniCalendar(); };
+document.getElementById('mini-next').onclick = () => { currentDate.setMonth(currentDate.getMonth() + 1); renderMiniCalendar(); };
 renderMiniCalendar();
 </script>
 
