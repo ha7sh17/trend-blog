@@ -12,7 +12,7 @@ theme = "PaperMod"
 
 [params.homeInfoParams]
   Title = "🔥 Daily Trends"
-  Content = "Automatically curated trending topics from around the world"
+  Content = "Your source for the latest trending stories, breaking news, and viral topics"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
