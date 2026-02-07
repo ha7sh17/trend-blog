@@ -5,8 +5,8 @@
 ## 📍 URLs
 
 - **Live Site:** https://trend-blog-313.pages.dev/
-- **GitHub:** https://github.com/stegolab/trend-blog
-- **Cloudflare Pages:** stegolab 계정
+- **GitHub:** https://github.com/ha7sh17/trend-blog
+- **Cloudflare Pages:** ha7sh17 계정
 
 ## 🛠 기술 스택
 
