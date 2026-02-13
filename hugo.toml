@@ -9,6 +9,19 @@ theme = "PaperMod"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
+  
+  # SEO
+  description = "Trending news, sports, entertainment, and lifestyle stories. Stay updated with the latest buzz."
+  author = "Trend Blog"
+  
+  # Open Graph / Social
+  images = ["/images/og-default.png"]
+  
+  # Schema.org
+  [params.schema]
+    type = "WebSite"
+    name = "Trend Blog"
+    url = "https://ptgd.city/"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
