@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://trend-blog-313.pages.dev/sitemap.xml
+Sitemap: https://ptgd.city/sitemap.xml
