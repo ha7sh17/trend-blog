@@ -24,7 +24,7 @@ We publish multiple times daily to ensure you're always up to date with the late
 
 ### Contact
 
-Have feedback or suggestions? Reach out at: **contact@trend-blog.com**
+Have feedback or suggestions? Reach out at: **contact@ptgd.city**
 
 ---
 
