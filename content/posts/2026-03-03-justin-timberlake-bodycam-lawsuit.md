@@ -1,6 +1,6 @@
 ---
 title: "Why Justin Timberlake Is Trending: The Sag Harbor Bodycam Lawsuit, Privacy Debate, and What Happens Next"
-date: 2026-03-03T21:05:00+09:00
+date: 2026-03-03T20:50:00+09:00
 draft: false
 description: "Justin Timberlake is trending in the U.S. after filing a lawsuit to block release of police body-camera footage from his 2024 Sag Harbor impaired-driving arrest. Here’s what the filing says, why the case matters beyond celebrity news, and what to watch next."
 tags:
