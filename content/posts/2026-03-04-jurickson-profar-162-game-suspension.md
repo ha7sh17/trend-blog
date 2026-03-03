@@ -1,6 +1,6 @@
 ---
 title: "Why Jurickson Profar Is Trending: The Reported 162-Game Suspension That Shook the Braves and Team Netherlands"
-date: 2026-03-04T03:15:00+09:00
+date: 2026-03-04T03:00:00+09:00
 draft: false
 description: "Jurickson Profar surged on Google Trends after reports of a second PED violation and a potential 162-game MLB suspension. Here’s what happened, what it means for the Braves and the World Baseball Classic, and why fans are reacting so strongly."
 tags:
