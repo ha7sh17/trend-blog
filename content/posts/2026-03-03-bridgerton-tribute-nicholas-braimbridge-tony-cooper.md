@@ -1,6 +1,6 @@
 ---
 title: "Why ‘Nicholas Braimbridge Tony Cooper’ Is Trending: The Bridgerton Season 4 Tribute Explained"
-date: 2026-03-03T15:12:00+09:00
+date: 2026-03-03T09:00:00+09:00
 draft: false
 description: "The keyword ‘Nicholas Braimbridge Tony Cooper’ is trending after Bridgerton Season 4 ended with a memorial card. Here’s who they were, what they did behind the scenes, and why this tribute resonated so strongly with viewers."
 tags:
