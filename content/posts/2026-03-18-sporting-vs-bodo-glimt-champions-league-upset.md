@@ -1,6 +1,6 @@
 ---
 title: "Sporting vs Bodo/Glimt Is Trending: Why a 10K+ Search Spike Turned Into the Champions League’s Biggest Cinderella Story"
-date: 2026-03-18T03:25:00+09:00
+date: 2026-03-18T03:10:00+09:00
 draft: false
 description: "‘Sporting vs Bodo/Glimt’ surged on Google Trends in the U.S. as underdog Bodo/Glimt carried a 3-0 first-leg lead into Lisbon, sparking global interest in a potential quarterfinal breakthrough."
 tags:
