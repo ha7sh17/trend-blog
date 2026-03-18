@@ -1,6 +1,6 @@
 ---
 title: "Why ‘DeMar DeRozan’ Is Trending: The Oldest 40-Point, 10-Assist Game in NBA History"
-date: 2026-03-18T12:10:00+09:00
+date: 2026-03-18T11:50:00+09:00
 draft: false
 description: "DeMar DeRozan is surging on Google Trends after dropping 41 points and 11 assists vs. Utah, setting the NBA mark as the oldest player ever with a 40-point, 10-assist game."
 tags:
