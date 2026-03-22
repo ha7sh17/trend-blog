@@ -1,6 +1,6 @@
 ---
 title: "Why ‘Coco Gauff’ Is Trending: Miami Comeback, Injury Questions, and the Pressure of Being America’s Standard-Bearer"
-date: 2026-03-22T09:10:00+09:00
+date: 2026-03-22T08:55:00+09:00
 draft: false
 description: "Coco Gauff is trending in the U.S. after a gritty three-set win at the Miami Open. Here’s what happened against Elisabetta Cocciaretto, what we know about her recent arm concern, and why fan attention spiked right now."
 tags:
