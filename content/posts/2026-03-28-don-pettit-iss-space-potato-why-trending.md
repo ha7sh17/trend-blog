@@ -1,6 +1,6 @@
 ---
 title: "Don Pettit’s ‘ISS Space Potato’ Is Trending: Why the Purple ‘Alien Egg’ Photo Blew Up"
-date: 2026-03-28T03:05:00+09:00
+date: 2026-03-28T03:00:00+09:00
 draft: false
 description: "NASA astronaut Don Pettit’s strange purple ‘tentacled’ photo from the ISS went viral before people realized it was a potato nicknamed Spudnik-1. Here’s why the trend exploded and what it says about space culture in 2026."
 tags:
